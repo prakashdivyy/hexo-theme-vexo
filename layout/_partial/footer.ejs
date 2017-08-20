@@ -1,8 +1,6 @@
 <footer class="app-footer">
   <p class="copyright">
-    &copy; <%= new Date().getFullYear() %> | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
-    <br>
-    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+    &copy; <%= new Date().getFullYear() %> | Built using <a href="https://hexo.io" target="_blank">Hexo</a>
   </p>
 </footer>
 
@@ -41,18 +39,4 @@
     });
   })
 </script>
-<!-- Baidu Tongji -->
-<% if (config.ba_track_id) { %>
-<script>
-    var _baId = '<%= theme.baidu_id %>';
-    // Originial
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "//hm.baidu.com/hm.js?" + _baId;
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
-<% } %>
 <%- js('js/script') %>
