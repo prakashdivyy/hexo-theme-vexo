@@ -31,7 +31,13 @@
    ```
    cd your-hexo-folder
 
-   git clone https://github.com/yanm1ng/hexo-theme-vexo.git themes/vexo
+   git clone https://github.com/prakashdivyy/hexo-theme-vexo.git themes/vexo
+
+   cd themes/vexo
+
+   git checkout blog
+
+   cd ../../
 
    cp -R themes/vexo/_source/* source/
    ```
