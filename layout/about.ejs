@@ -1,4 +1,4 @@
-<div id="about-banner" style="background-image: url(<%- theme.about.banner %>)"></div>
+<div id="about-banner"></div>
 <div class="author">
   <div class="head">
     <img src="<%- theme.about.avatar %>" />
@@ -19,6 +19,8 @@
 
 <script>
   (function () {
+    var url = '<%= config.url %>/<%= page.path %>'
+    $('#about-banner').geopattern(url)
     $('.header').removeClass('fixed-header')
     var windowH = $(window).height();
     var author = $('.author')
