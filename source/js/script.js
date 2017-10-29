@@ -4,6 +4,7 @@
   var banner = document.getElementById('article-banner') || false
   var about = document.getElementById('about-banner') || false
   var top = $('.scroll-top')
+  var catalog = $('.catalog-container .toc-main')
   var isOpen = false
 
   $(document).ready(function () {
@@ -50,11 +51,11 @@
   })
 
   $('.arrow-down').on('click', function () {
-    $('html,body').animate({ scrollTop: banner.offsetHeight - header.height() }, 500)
+    $('html, body').animate({ scrollTop: banner.offsetHeight - header.height() }, 500)
   })
 
   top.on('click', function () {
-    $('html,body').animate({ scrollTop: 0 }, 600)
+    $('html, body').animate({ scrollTop: 0 }, 600)
   })
 
   document.addEventListener('scroll', function () {
@@ -71,6 +72,11 @@
       top.addClass('opacity')
     } else {
       top.removeClass('opacity')
+    }
+    if (scrollTop > 190) {
+      catalog.addClass('fixed-toc')
+    } else {
+      catalog.removeClass('fixed-toc')
     }
   })
 })(jQuery)
